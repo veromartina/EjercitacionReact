@@ -1,11 +1,12 @@
+import './EstilosComp.css'    // Importa los estilos Crear archivo
 
-const Button = ({ color, texto, isEnabled })  => {  {/*destructuring*/}
-    console.log('Button props:', { color, texto, isEnabled });
-
+const Button = ({ children, style }) => {
     return (
-        <button style={{ backgroundColor: color }} disabled={!isEnabled}>
-            {texto}
+    
+        <button  className="button" style={style}>
+            {children}
         </button>
+        
     );
 };
 
