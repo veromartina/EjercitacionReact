@@ -1,18 +1,18 @@
-import './App.css'
-import CountJS from './components/CountJS'
-import CountReact from './components/CountReact.jsx'
-import Title from './components/Title.jsx'
 
-function App() {
+import Accordion from "./components/Accordion";
+import Contador from "./components/Contador";
+import Titulo from "./components/Titulo";
+import Titulo1 from "./components/Titulo1";
 
+const App = () => {
   return (
-      <div>
-      <CountReact />
-      <CountJS />
-      <Title />
-      </div>
-     
-  )
-}
+    <div>
+      <Titulo/>
+      <Contador/>
+      <Accordion/>
+      <Titulo1/>
+    </div>
+  );
+};
 
-export default App
+export default App;
