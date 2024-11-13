@@ -17,7 +17,7 @@
 // 2 - No puedo ejecutar inmediatamente
 	//     estado  ,  la funcion encargada de cambiar el valor del estado
 
-//     si no paso el callback se ejecuta o si la ejecuto directamente fuera de una funcion  crea un loop infinito, se ejecuta cambia el estado se ejecuta y vuelve a cambiar..
+//     si  no paso el callback se ejecuta o si la ejecuto directamente fuera de una funcion  crea un loop infinito, se ejecuta cambia el estado se ejecuta y vuelve a cambiar..
 // react tiene un limite  de renderizado
 
 // el nombre setAlgo es x convencion 
