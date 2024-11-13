@@ -1,21 +1,12 @@
-import './App.css'
-import { TaskList } from './components/TaskList'
-import { Ejercicio } from './components/Ejercicio'
-import { FormControlado } from './components/FormControlado'
-import { FormNoControlado } from './components/FormNoControlado'
 
+import Login from './components/Login'; // Asegúrate de que la ruta sea correcta
 
-function App() {
-
+const App = () => {
   return (
-      <div>
-         <FormNoControlado /> 
-         <FormControlado /> 
-         <Ejercicio /> 
-    <TaskList />
-      </div>
-     
-  )
-}
+    <div >
+      <Login />
+    </div>
+  );
+};
 
-export default App
+export default App;
