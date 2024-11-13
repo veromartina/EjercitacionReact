@@ -1,17 +1,15 @@
-
-import './App.css';
-import Card from "./components/Card";
+import "./App.css";
+import { List } from "./components/List";
 
 function App() {
 
-
   return (
-    
-      <div>
-        <Card/>
+      <div className="card">
+        <h5>CLASE 11 ELEVANDO ESTADO</h5>
+       
+        <List />
       </div>
-      
-  )
+  );
 }
 
-export default App
+export default App;
