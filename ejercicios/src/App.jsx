@@ -1,18 +1,13 @@
 
-import Accordion from "./components/Accordion";
-import Contador from "./components/Contador";
-import Titulo from "./components/Titulo";
-import Titulo1 from "./components/Titulo1";
+import './App.css'
+import { Card } from './quiz/components/Card';
+   
+function App() {
 
-const App = () => {
-  return (
-    <div>
-      <Titulo/>
-      <Contador/>
-      <Accordion/>
-      <Titulo1/>
-    </div>
-  );
-};
+    
+      return (
+       <Card/>
+    );
+  };
 
-export default App;
+export default App
