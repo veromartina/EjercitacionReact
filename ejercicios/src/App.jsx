@@ -1,13 +1,14 @@
 import "./App.css";
-import { List } from "./components/List";
+import CurrencyConverter from "./components/CurrencyConverter";
+
 
 function App() {
 
   return (
       <div className="card">
-        <h5>CLASE 11 ELEVANDO ESTADO</h5>
+        <h1>Convertidor</h1>
        
-        <List />
+        <CurrencyConverter />
       </div>
   );
 }
