@@ -1,13 +1,17 @@
 
-import './App.css'
-import { Card } from './quiz/components/Card';
-   
+import './App.css';
+import Card from "./components/Card";
+
 function App() {
 
+
+  return (
     
-      return (
-       <Card/>
-    );
-  };
+      <div>
+        <Card/>
+      </div>
+      
+  )
+}
 
 export default App
