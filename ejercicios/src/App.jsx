@@ -1,16 +1,17 @@
-import "./App.css";
-import CurrencyConverter from "./components/CurrencyConverter";
+import './App.css'
+import Carrusel from './components/Carrusel'
+
 
 
 function App() {
 
+
   return (
-      <div className="card">
-        <h1>Convertidor</h1>
-       
-        <CurrencyConverter />
-      </div>
-  );
+    <>
+      <Carrusel />
+
+    </>
+  )
 }
 
-export default App;
+export default App
