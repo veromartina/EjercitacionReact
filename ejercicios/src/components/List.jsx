@@ -5,8 +5,7 @@ import { StringRed } from "./StringRed";
 
 export const List = () => {
   const [search, setSearch] = useState("");
-  const [data, setData] = useState(students);
-
+  const [data, setData] = useState(students); //creo el estado en el componente padre, lo uso en la funcion y luego se lo paso por props al componente SubString
   const handleRemove = (element) => {
     setData((prev) => prev.filter((student) => student !== element));
   };
@@ -36,7 +35,7 @@ export const List = () => {
         onChange={handleSearch} //Cada vez que el valor del input cambia, se ejecuta la función handleSearch para actualizar el estado y filtrar la lista de estudiantes.
       />
       <ul>
-        <SubString data={data} handleRemove={handleRemove} />
+        <SubString data={data} handleRemove={handleRemove} /> {/*paso por props la funcion que necesita el componente y no se pasa setData para no darle la libertad de hacer mas cosas*/}
         {data.map((element) => (
           <StringRed key={element} element={element} search={search} />
         ))}{" "}
