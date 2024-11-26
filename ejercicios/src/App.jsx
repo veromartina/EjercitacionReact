@@ -1,37 +1,27 @@
-import { useState } from "react";
-import "./App.css";
-import { CosteAlquiler } from "./components/CosteAlquiler";
-import { CosteHotel } from "./components/CosteHotel";
-import { Button1 } from "./buttons/Button1";
-import { Button2 } from "./buttons/Button2";
+import { Container, Input, Text } from "@chakra-ui/react";
+
+import { useState } from 'react';
+import CosteHotel from "./components/CosteHotel";
+import CosteAlquiler from "./components/CosteAlquiler";
 
 function App() {
+
+  /* const [noches, setNoches] = useState(0); */
   const [night, setNight] = useState(0);
 
-  const handleNight = (e) => {
-    setNight(e.target.value);
-  };
   return (
-    <div >
-      <h1 className="prueba">Calculadora de costo de viaje</h1>
-      <div>
-        <label htmlFor="night">Cantidad de noches</label>
-        <input
-          type="number"
-          min="1"
-          value={night}
-          id="night"
-          onChange={handleNight}
-          placeholder="Introduce la cantidad de noches"
-        />
+    <Container maxW="md" minHeight="100vh" bg="gray.400">
+       <Text fontSize="lg">{night}</Text> 
 
-      </div>
-      <CosteAlquiler night={night} />
+      <Input
+        placeholder="Ingrese el número de noches"
+        type="number"
+        value={night}
+        onChange={(e) => setNight(e.target.value)}
+      />
       <CosteHotel night={night} />
-      <Button1 />
-      <Button2 />
-
-    </div>
+      <CosteAlquiler night={night} />
+    </Container>
   );
 }
 
