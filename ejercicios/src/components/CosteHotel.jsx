@@ -1,21 +1,17 @@
-import style from './Components.module.css'
+import { VStack, Heading, Text } from "@chakra-ui/react";
+const CosteHotel = ({ night }) => {
 
-export const CosteHotel = ({ night }) => {
-  console.log(style.prueba)
-  console.log(style.test)
-  console.log(style)
+    const costeDia = 140;
+    const costeTotal = costeDia * night;
 
-
-  const coste = 140;
-
-  let costeTotal = night * coste;
   return (
-    <div>
-      <h4 className={style.test}>Costo total de estadía</h4>
-      <p className={style.prueba}>
-        El coste de su estadía por {night} noches y alquiler de vehiculo seria : $
-        <span style={{ color: "red" }}>{costeTotal}</span>
-      </p>
-    </div>
+    <VStack>
+      <Heading>
+              El coste de su estadia por {night} noches es:
+      </Heading>
+              <Text color='red'>{costeTotal}</Text>
+    </VStack>
   );
-};
+}
+
+export default CosteHotel

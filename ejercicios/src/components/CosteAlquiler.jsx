@@ -1,25 +1,23 @@
-const title = {
-    color: "green",
-  };
-  const coste = 40;
-  
-  export const CosteAlquiler = ({ night }) => {
-  
-    let costeTotal = night * coste;
-  
-    if (night >= 3 && night < 7) {
-      costeTotal -= 20;
-    } else if (night >= 7) {
-      costeTotal -= 50;
-    }
-  
-    return (
-      <div>
-        <h3>Coste Alquiler de coche</h3>
-        <p style={title}>
-          El costo de alquiler de coche por {night} noches es :{" "}
-          <span style={{ color: "red" }}>{costeTotal}</span>
-        </p>
-      </div>
-    );
-  };
+
+import { Text, VStack } from "@chakra-ui/react";
+
+const coste = 40;
+const CosteAlquiler = ({ night }) => {
+  let costeTotal = coste * night;
+  if (night >= 3 && night < 7) {
+    costeTotal = costeTotal - 20;
+  } else if (night >= 7) {
+    costeTotal = costeTotal - 50;
+  }
+  return (
+    <VStack>
+      <Text>Coste de Alquiler</Text>
+      <Text >
+        El coste de alquiler de coche por {night} noches es:
+        <span > {costeTotal}</span>
+      </Text>
+    </VStack>
+  );
+};
+
+export default CosteAlquiler;
